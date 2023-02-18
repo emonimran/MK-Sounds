@@ -12,11 +12,13 @@ function ProductSwiper() {
     <div>
       <Swiper spaceBetween={10} slidesPerView={4.5} className="w-full">
         {Products.map((product) => (
-          <SwiperSlide>
-            <img src={product.picture} alt={product.name} />
-            <h1>{product.name}</h1>
-            <h1>Price{product.price}</h1>
-            <h1>Rating:{product.ratting}</h1>
+          <SwiperSlide className="flex items-center justify-center">
+            <div className="rounded-full shadow-lg text-center">
+              <img src={product.picture} alt={product.name} />
+              <h1>{product.name}</h1>
+              <h1>Price{product.price}</h1>
+              <h1>Rating:{product.ratting}</h1>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
