@@ -13,10 +13,10 @@ function ProductSwiper() {
       <Swiper spaceBetween={10} slidesPerView={4.5} className="w-full">
         {Products.map((product) => (
           <SwiperSlide>
-            <h1>name={product.name}</h1>
-            <h1>newPrice={product.price}</h1>
-            <h1>rating={product.ratting}</h1>
-            <h1>image={product.picture}</h1>
+            <img src={product.picture} alt={product.name} />
+            <h1>{product.name}</h1>
+            <h1>Price{product.price}</h1>
+            <h1>Rating:{product.ratting}</h1>
           </SwiperSlide>
         ))}
       </Swiper>
